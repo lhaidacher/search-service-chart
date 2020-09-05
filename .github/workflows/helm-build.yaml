@@ -22,11 +22,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Package and push Chart
-        uses: goodsmileduck/helm-push-action@v3.2.4
+      - name: Package chart
         env:
-          SOURCE_FOLDER: '..'
-          CHART_FOLDER: 'search-service-chart'
-          CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum/onlineshop'
-          CHARTMUSEUM_USER: '${{ secrets.HARBOR_USERNAME }}'
-          CHARTMUSEUM_PASSWORD: '${{ secrets.HARBOR_PASSWORD }}'
+          - USERNAME: test
+        run: echo $USERNAME
+      #- name: Package and push Chart
+      #  uses: goodsmileduck/helm-push-action@v3.2.4
+      #  env:
+      #    SOURCE_FOLDER: '..'
+      #    CHART_FOLDER: 'search-service-chart'
+      #    CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum/onlineshop'
+      #    CHARTMUSEUM_USER: '${{ secrets.HARBOR_USERNAME }}'
+      #    CHARTMUSEUM_PASSWORD: '${{ secrets.HARBOR_PASSWORD }}'
