@@ -3,17 +3,10 @@ replicaCount: 1
 image:
   repository: harbor.lhaidacher.com/onlineshop/search-service
   pullPolicy: IfNotPresent
-  #tag: "sha-eb0d535"
-  #tag: sha-eb0d535
-
-#imageCredentials:
-#  registry: harbor.lhaidacher.com/onlineshop
-#  username: admin
-#  password: affe123456
 
 imagePullSecrets:
 - name: regcred
-nameOverride: ""
+
 fullnameOverride: "search-service"
 
 serviceAccount:
