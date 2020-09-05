@@ -28,7 +28,7 @@ jobs:
         run: helm plugin install https://github.com/chartmuseum/helm-push.git
       - name: Push chart
         env:
-          URL: https://harbor.lhaidacher.com/chartmuseum/onlineshop
+          URL: https://harbor.lhaidacher.com/chartrepo/onlineshop
           NAME: ${{ secrets.HARBOR_USERNAME }}
           PW: ${{ secrets.HARBOR_PASSWORD }}
         run: helm push search-service-chart-* ${{ env.URL }} -u ${{ env.NAME }} -p ${{ env.PW }}
