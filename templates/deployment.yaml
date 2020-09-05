@@ -40,7 +40,7 @@ spec:
           readinessProbe:
             httpGet:
               path: actuator/health
-              port: 4043
+              port: 8080
             initialDelaySeconds: 15
             timeoutSeconds: 2
             periodSeconds: 3
@@ -48,7 +48,7 @@ spec:
           livenessProbe:
             httpGet:
               path: actuator/health
-              port: 4043
+              port: 8080
             initialDelaySeconds: 100
             timeoutSeconds: 2
             periodSeconds: 8
