@@ -25,7 +25,7 @@ jobs:
       - name: Package and push Chart
         uses: unwrittenmedia/helm3-push-action@v1.0.2
         env:
-          CHART_FOLDER: './'
+          CHART_FOLDER: '.'
           CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum'
           CHARTMUSEUM_USER: '${{ secrets.HARBOR_USERNAME }}'
           CHARTMUSEUM_PASSWORD: '${{ secrets.HARBOR_PASSWORD }}'
