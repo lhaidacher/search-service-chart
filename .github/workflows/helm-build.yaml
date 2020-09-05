@@ -23,9 +23,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Package and push Chart
-        uses: unwrittenmedia/helm3-push-action@v1.0.2
+        uses: goodsmileduck/helm-push-action@v3.2.4
         env:
           CHART_FOLDER: 'search-service-chart'
-          CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum'
+          CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum/onlineshop'
           CHARTMUSEUM_USER: '${{ secrets.HARBOR_USERNAME }}'
           CHARTMUSEUM_PASSWORD: '${{ secrets.HARBOR_PASSWORD }}'
