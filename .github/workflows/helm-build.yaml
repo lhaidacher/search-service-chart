@@ -32,11 +32,3 @@ jobs:
           NAME: ${{ secrets.HARBOR_USERNAME }}
           PW: ${{ secrets.HARBOR_PASSWORD }}
         run: helm push search-service-chart-* ${{ env.URL }} -u ${{ env.NAME }} -p ${{ env.PW }}
-      #- name: Package and push Chart
-      #  uses: goodsmileduck/helm-push-action@v3.2.4
-      #  env:
-      #    SOURCE_FOLDER: '..'
-      #    CHART_FOLDER: 'search-service-chart'
-      #    CHARTMUSEUM_URL: 'https://harbor.lhaidacher.com/chartmuseum/onlineshop'
-      #    CHARTMUSEUM_USER: '${{ secrets.HARBOR_USERNAME }}'
-      #    CHARTMUSEUM_PASSWORD: '${{ secrets.HARBOR_PASSWORD }}'
