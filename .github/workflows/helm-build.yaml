@@ -23,9 +23,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Package chart
+        run: helm package .
+      - name: Push chart
         env:
-          USERNAME: test
-        run: echo $USERNAME
+          URL: https://harbor.lhaidacher.com/chartmuseum/onlineshop
+          NAME: ${{ secrets.HARBOR_USERNAME }}
+          PW: ${{ secrets.HARBOR_PASSWORD }}
+        run: helm push search-service-chart-* ${{ env.URL }} -u ${{ env.NAME }} -p ${{ env.PW }}
       #- name: Package and push Chart
       #  uses: goodsmileduck/helm-push-action@v3.2.4
       #  env:
