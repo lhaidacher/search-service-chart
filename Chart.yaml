@@ -3,4 +3,4 @@ name: search-service-chart
 description: Helm chart for at.fhj.swd.search-service
 type: application
 version: 3.0.0
-appVersion: 'sha-f9af35b'
+appVersion: 'sha-f12670c'
