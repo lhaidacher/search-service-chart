@@ -7,6 +7,10 @@ image:
 imagePullSecrets:
 - name: regcred
 
+env:
+  - name: SPRING_PROFILES_ACTIVE
+    value: production
+
 fullnameOverride: "search-service"
 
 serviceAccount:
